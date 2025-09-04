@@ -19,6 +19,8 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "localize": true,
+            "i18nMissingTranslation": "error",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -59,6 +61,11 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "no": {
+              "localize": [
+                "no"
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -66,6 +73,9 @@
         "serve": {
           "builder": "@angular/build:dev-server",
           "configurations": {
+            "no": {
+              "buildTarget": "angular-i18n-demo:build:development,no"
+            },
             "production": {
               "buildTarget": "angular-i18n-demo:build:production"
             },
