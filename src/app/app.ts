@@ -12,5 +12,5 @@ import { RouterOutlet } from '@angular/router';
 export class App {
   date: Date = new Date();
   minutes = -1;
-  gender = 'female';
+  gender = 'male';
 }
