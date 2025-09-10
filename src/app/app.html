@@ -6,21 +6,7 @@
   Welcome to Angular internationalization.
 </p>
 
-<lib-tomJaspMF2></lib-tomJaspMF2>
-
-<p i18n="timeMessage|Plural example">
-  {minutes, plural,
-    =0 {just now}
-    =1 {one minute ago}
-    other {# minutes ago}
-  }
-</p>
-
-<p i18n="genderMessage|Gender select example">
-  The author is {gender, select, male {male} female {female} other {other}}
-</p>
-
-<p>{{date | date}}</p>
+<lib-tomJaspMF2 msg="Thomas {#bold}important{/bold}"></lib-tomJaspMF2>
 
 
 <router-outlet />
