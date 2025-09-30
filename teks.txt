@@ -1,0 +1,4 @@
+ting å gjøre:
+ - Videre utvikle det vi har fra før av
+ - variabler i JSON filer
+ - fikse sånn man ikke kan inject kode.

@@ -1,12 +1,9 @@
-<h1 i18n="introductionHeader|An introduction header for this demo">
-  Hello i18n!
-</h1>
-
-<p i18n="welcomeMessage|Short welcome text">
-  Welcome to Angular internationalization.
-</p>
-
-<lib-tomJaspMF2 msg="Thomas {#bold}important{/bold}"></lib-tomJaspMF2>
 
 
-<router-outlet />
+<p>{{ 'greeting' | i18n:{ name: 'Thomas' } }}</p>
+
+<p [innerHTML]="'greeting' | i18n:{ name: 'Thomas' }"></p>
+<button (click)="setEN()">English</button>
+<button (click)="setNO()">Norsk</button>
+
+

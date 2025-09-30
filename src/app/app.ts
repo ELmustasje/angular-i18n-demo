@@ -1,17 +1,16 @@
-import { DatePipe } from '@angular/common';
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { TomJaspMF2 } from 'tomJaspMF2'
 
+import { Component } from '@angular/core';
+import {
+    I18nPipe, I18nStore
+} from 'mf2-i18n';
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet, DatePipe, TomJaspMF2],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+    selector: 'app-home',
+    standalone: true,
+    templateUrl: './app.html',
+    imports: [I18nPipe]
 })
-
 export class App {
-  date: Date = new Date();
-  minutes = -1;
-  gender = 'male';
+    constructor(private i18n: I18nStore) { }
+    setEN() { this.i18n.setLocale('en'); }
+    setNO() { this.i18n.setLocale('no'); }
 }
